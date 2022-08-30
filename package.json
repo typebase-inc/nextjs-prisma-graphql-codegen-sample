@@ -12,11 +12,19 @@
     "format": "run-s format:prettier format:eslint",
     "format:eslint": "yarn lint:eslint --fix",
     "format:prettier": "yarn lint:prettier --write",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "codegen": "graphql-codegen"
   },
   "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.5.3",
+    "@graphql-tools/load": "^7.7.5",
+    "@graphql-tools/schema": "^9.0.2",
     "@next-auth/prisma-adapter": "^1.0.4",
     "@prisma/client": "^4.2.1",
+    "apollo-server-micro": "^3.10.2",
+    "graphql": "^16.6.0",
+    "micro": "^9.4.1",
+    "micro-cors": "^0.1.1",
     "next": "12.2.5",
     "next-auth": "^4.10.3",
     "nodemailer": "^6.7.8",
@@ -24,6 +32,11 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.11.8",
+    "@graphql-codegen/schema-ast": "^2.5.1",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-resolvers": "^2.7.3",
+    "@types/micro-cors": "^0.1.2",
     "@types/node": "18.7.13",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
