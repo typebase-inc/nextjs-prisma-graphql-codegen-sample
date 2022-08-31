@@ -18,3 +18,15 @@ generates:
         Todo: '@prisma/client#Todo'
       scalars:
         DateTime: string
+  src/generated/request.ts:
+    schema:
+      - 'src/graphql/typeDefs/**/*.graphql'
+    documents:
+      - 'src/graphql/typeDefs/**/*.graphql'
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      scalars:
+        DateTime: string
